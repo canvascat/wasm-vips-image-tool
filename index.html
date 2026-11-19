@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%pwa-192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="基于 wasm-vips 的本地图片处理工具，支持裁剪、旋转、翻转、水印与导出。"
+    />
+    <title>图片处理工具 · wasm-vips</title>
+    <script>
+      window.coi = {
+        shouldRegister: () => !window.crossOriginIsolated,
+        quiet: true,
+      };
+    </script>
+    <script src="%BASE_URL%coi-serviceworker.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
